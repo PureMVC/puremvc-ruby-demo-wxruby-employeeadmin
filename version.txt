@@ -1,0 +1,13 @@
+﻿PureMVC Ruby Standard Demo - Employee Admin
+Ported to Ruby by Jake Dempsey <jake.dempsey@puremvc.org>
+Copyright(c) 2006-2008 Futurescale, Inc., Some rights reserved.
+Your reuse is governed by the Creative Commons Attribution 3.0 License
+--------------------------------------------------------------------------
+Release Date: 1/18/09
+    Platform: Ruby, wxRuby
+     Version: 1 
+    Revision: 0
+     Authors: Jake Dempsey <jake.dempsey@puremvc.org>
+     License: Creative Commons Attribution 3.0 Unported License
+--------------------------------------------------------------------------
+1.0 - AS3 Employee Admin Demo ported to run under PureMVC Ruby Standard 1.0
