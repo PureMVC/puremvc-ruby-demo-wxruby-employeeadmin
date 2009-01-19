@@ -10,7 +10,7 @@ class AppFacade < Facade
 end
 
 class NotificationName
-  STARTUP	    	= "startup"
+  STARTUP	    = "startup"
   NEW_USER          = "newUser"
   DELETE_USER       = "deleteUser"
   CANCEL_SELECTED   = "cancelSelected"

@@ -18,8 +18,10 @@ class RolePanelMediator < Mediator
   end
   
   def on_remove_role
-    @role_proxy.remove_role_from_user(self.view.user, self.view.selected_role)
+    role = self.view.selected_role
+    @role_proxy.remove_role_from_user(self.view.user, role)
     self.view.update_role_list(@role_proxy.get_user_roles(self.view.user.username))
+    self.send_notification(NotificationName::SHOW_DIALOG, "Role #{role} removed from user #{self.view.user.username}.")
   end
   
   def list_notification_interests
