@@ -1,4 +1,4 @@
-The following items are required from running the Employee Demo
+The following items are required for running the Employee Demo
 
 1. You will need ruby installed. The one-click installer is HIGHLY recommended:
 - You can download ruby at http://www.ruby-lang.org/en/downloads/
