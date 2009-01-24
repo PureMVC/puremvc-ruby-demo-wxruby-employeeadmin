@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'wx'
+require 'puremvc-ruby'
 
 #Load PureMVC Framework (and any other libraries) from /lib
 Dir['lib/**/init.rb'].each do |library|
