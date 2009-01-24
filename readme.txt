@@ -13,5 +13,8 @@ The following items are required for running the Employee Demo
 3. You will need wxruby installed
 - Open the terminal/command prompt and type "gem install wxruby"
 
-4. Run the Employee Demo
+4. You will need puremvc-ruby installed
+- Open the terminal/command prompt and type "gem install puremvc-ruby"
+
+5. Run the Employee Demo
 - The Employee Demo can be run by navigating to the project directory and typing "ruby init.rb"
