@@ -10,7 +10,7 @@ class AppFacade < Facade
 end
 
 class NotificationName
-  STARTUP	    	= "startup"
+  STARTUP	    = "startup"
   NEW_USER          = "newUser"
   DELETE_USER       = "deleteUser"
   CANCEL_SELECTED   = "cancelSelected"
@@ -21,9 +21,11 @@ class NotificationName
   USER_DELETED      = "userDeleted"
   
   ADD_ROLE          = "addRole"
+  DELETE_ROLE       = "deleteRole"
   ADD_ROLE_RESULT   = "addRoleResult"
   
-  SHOW_DIALOG       =  "showDialog"
+  SHOW_ALERT_DIALOG       =  "showAlertDialog"
+  SHOW_DELETE_ROLE_COFIRMATION = "showDeleteRoleConfirmation"
 end
 
 # PureMVC Ruby Standard Demo - Employee Admin

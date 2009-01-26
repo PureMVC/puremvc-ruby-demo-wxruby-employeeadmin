@@ -2,7 +2,7 @@ class AddRoleResultCommand < SimpleCommand
   ROLE_EXISTS_ERROR = "Role already exists for this user."
   
   def execute(note)
-    self.facade.send_notification(NotificationName::SHOW_DIALOG, ROLE_EXISTS_ERROR) unless note.body
+    self.facade.send_notification(NotificationName::SHOW_ALERT_DIALOG, ROLE_EXISTS_ERROR) unless note.body
   end
 end
 # PureMVC Ruby Standard Demo - Employee Admin

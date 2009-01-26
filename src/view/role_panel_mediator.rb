@@ -18,8 +18,7 @@ class RolePanelMediator < Mediator
   end
   
   def on_remove_role
-    @role_proxy.remove_role_from_user(self.view.user, self.view.selected_role)
-    self.view.update_role_list(@role_proxy.get_user_roles(self.view.user.username))
+    self.send_notification(NotificationName::SHOW_DELETE_ROLE_COFIRMATION, [self.view.selected_role, self.view.user])
   end
   
   def list_notification_interests
@@ -30,7 +29,8 @@ class RolePanelMediator < Mediator
       NotificationName::USER_DELETED,
       NotificationName::CANCEL_SELECTED,
       NotificationName::USER_SELECTED,
-      NotificationName::ADD_ROLE_RESULT
+      NotificationName::ADD_ROLE_RESULT,
+      NotificationName::DELETE_ROLE
     ]
   end
   
@@ -52,6 +52,9 @@ class RolePanelMediator < Mediator
       self.view.user = note.body
       self.view.update_role_list(@role_proxy.get_user_roles(self.view.user.username))
     when NotificationName::ADD_ROLE_RESULT
+      self.view.update_role_list(@role_proxy.get_user_roles(self.view.user.username))
+    when NotificationName::DELETE_ROLE
+      @role_proxy.remove_role_from_user(self.view.user, note.body)
       self.view.update_role_list(@role_proxy.get_user_roles(self.view.user.username))
     end
   end
